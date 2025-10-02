@@ -12,22 +12,22 @@ def exercice4() :
     année_naissance=int(input("En quelle année est tu né"))
     année_actuelle = 2025
     age=année_actuelle - année_naissance
-    print (age)
+    print ("tu as",age,"ans")
 def exercice5() :
     nb1=int(input("Donner un premier nombre"))
-    nb2=int(input("Donner un second nombre" )
+    nb2=int(input("Donner un second nombre" ))
     print("la somme des deux nombres est ",nb1+nb2)
 def exercice6() :
     nb1=int(input("Donner un premier nombre"))
-    nb2=int(input("Donner un second nombre" )
+    nb2=int(input("Donner un second nombre" ))
     print("la différence des deux nombres est ",nb1-nb2)
 def exercice7() :
     nb1=int(input("Donner un premier nombre"))
-    nb2=int(input("Donner un second nombre" )
+    nb2=int(input("Donner un second nombre" ))
     print("le produit des deux nombres est ",nb1*nb2)
 def exercice8():
     nb1=int(input("Donner un premier nombre"))
-    nb2=int(input("Donner un second nombre" )
+    nb2=int(input("Donner un second nombre" ))
     print("le resultat de la division des deux nombres est ",nb1/nb2)
 def exercice9():
     nb=int(input("Donner un nombre que vous voulez mettre au carré"))
@@ -46,18 +46,18 @@ def exercice13():
         print(i+1)
 def exercice14():
     for i in range(1,6):
-        print "2 *",i,"=",2*i
+        print ("2 *",i,"=",2*i)
 def exercice15():
-    longueur_coté=int(input("Quel est la tailel de la longueur ?")
+    longueur_coté=int(input("Quel est la tailel de la longueur ?"))
     print("Périmètre = ",longueur_coté*4)
 def exercice16():
-    longueur_coté=int(input("Quel est la taille de la longueur ?")
+    longueur_coté=int(input("Quel est la taille de la longueur ?"))
     print("Aire = ",longueur_coté**2)
 def exercie17():
-    nb_euros=int(input("Quelle somme en € voulez vous transformer en $")
+    nb_euros=int(input("Quelle somme en € voulez vous transformer en $"))
     print(nb_euros,"€ = ",nb_euros*1.1,"$")
 def exercice18():
-    nb_minutes=int(input("combien de minutes voulez vous transformer en seconde ?"))
+    nb_minutes=int(input("combien de minutes voulez vous transformer en seconde)) ?"))
     print(nb_minutes,"minutes =",nb_minutes*60,"secondes")
 def exercice19():
     prix_HT("quel est le prix HT ?")
@@ -67,14 +67,13 @@ def exercice20():
     age=int(input("Quel est ton age ?"))
     print("Bonjour",nom,"tu as",age,"age")
 def exercice21():
-    nb=(int(input("Donne moi un nombre")
+    nb=int(input("Donne moi un nombre"))
     if nb>0 :
         print("ce nombre est positif")
     elif nb==0 :
         print("ce nombre est nul")
     else:
         print("ce nombre est négatif")
-def exercice22():
 def main():
     while True:
         print("\n=== Menu des exercices ===")
@@ -87,3 +86,49 @@ def main():
             exercice2()
         elif choix == "3":
             exercice3()
+        elif choix == "4":
+            exercice4()
+        elif choix == "5":
+            exercice5()
+        elif choix == "6":
+            exercice6()
+        elif choix == "7":
+            exercice7()
+        elif choix == "8":
+            exercice8()
+        elif choix == "9":
+            exercice9()
+        elif choix == "10":
+            exercice10()
+        elif choix == "11":
+            exercice11()
+        elif choix == "12":
+            exercice12()
+        elif choix == "13":
+            exercice13()
+        elif choix == "14":
+            exercice14()
+        elif choix == "15":
+            exercice15()
+        elif choix == "16":
+            exercice16()
+        elif choix == "17":
+            exercice17()
+        elif choix == "18":
+            exercice18()
+        elif choix == "19":
+            exercice19()
+        elif choix == "20":
+            exercice20()
+        elif choix == "21":
+            exercice21()
+
+
+        elif choix == "q":
+            print("Au revoir 👋")
+            break
+        else:
+            print("⚠️ Choix non reconnu. Essayez encore.")
+main()
+        
+            
