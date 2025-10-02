@@ -100,90 +100,104 @@ def exercice25():
         print("Ordre croissant : OUI")
     else :
         print("Ordre croissant : NON")
-def exercice26():
-    nb=int(input("Donne un nb"))
-    if nb%5==0:
-        print("Divisible par 5")
-    else:
-        print("Non divisible par 5")
-def exercice27():
-    age=int(input("Donne ton age"))
-    if age<12:
-        print("Enfant")
-    if 12<age<17:
-        print("Adolescent")
-    else:
-        print("Adulte")
-def exercice28():
-    temp_eau=int(input("Quelle est la température de l'eau ?"))
-    if temp_eau<0 :
-        print("Glace")
-    elif 0<temp_eau<100:
-        print("liquide")
+def exercice26() :
+    nb= int ( input ( "Donne un nb" ) )
+    if nb % 5 == 0 :
+        print( "Divisible par 5" )
     else :
-        print("Gazeux")
-def main():
+        print ( "Non divisible par 5" )
+def exercice27() :
+    age=int ( input ("Donne ton age" ) )
+    if age < 12 :
+        print ( "Enfant" )
+    if 12< age < 17:
+        print ( "Adolescent" )
+    else :
+        print ( "Adulte" )
+def exercice28() :
+    temp_eau= int( input ( "Quelle est la température de l'eau ?" ) )
+    if temp_eau < 0 :
+        print ( "Glace" )
+    elif 0 < temp_eau < 100 :
+        print ( "liquide" )
+    else :
+        print ( "Gazeux" ) 
+def exercice29() :
+    mention = float ( input ( "Quelle moyenne as tu eus au bac ?" ) )
+    if mention < 10:
+        print("Recalé")
+    elif 10 <= mention< 12 :
+        print( "Passable" )
+    elif 12 <= mention <14 :
+        print( "Assez bien" )
+    elif 14 <= mention < 16 :
+        print( "Bien" )
+    else :
+        print ( "Très bien " )
+def main() :
     while True:
         print("\n=== Menu des exercices ===")
         print("q - Quitter")
         choix = input("Entrez le numéro de l'exercice à exécuter : ").strip().lower()
 
-        if choix == "1":
+        if choix == "1" :
             exercice1()
-        elif choix == "2":
+        elif choix == "2" :
             exercice2()
-        elif choix == "3":
+        elif choix == "3" :
             exercice3()
-        elif choix == "4":
+        elif choix == "4" :
             exercice4()
-        elif choix == "5":
+        elif choix == "5" :
             exercice5()
-        elif choix == "6":
+        elif choix == "6" :
             exercice6()
-        elif choix == "7":
+        elif choix == "7" :
             exercice7()
-        elif choix == "8":
+        elif choix == "8" :
             exercice8()
-        elif choix == "9":
+        elif choix == "9" :
             exercice9()
-        elif choix == "10":
+        elif choix == "10" :
             exercice10()
-        elif choix == "11":
+        elif choix == "11" :
             exercice11()
-        elif choix == "12":
+        elif choix == "12" :
             exercice12()
-        elif choix == "13":
+        elif choix == "13" :
             exercice13()
-        elif choix == "14":
+        elif choix == "14" :
             exercice14()
-        elif choix == "15":
+        elif choix == "15" :
             exercice15()
-        elif choix == "16":
+        elif choix == "16" :
             exercice16()
-        elif choix == "17":
+        elif choix == "17" :
             exercice17()
-        elif choix == "18":
+        elif choix == "18" :
             exercice18()
-        elif choix == "19":
+        elif choix == "19" :
             exercice19()
-        elif choix == "20":
+        elif choix == "20" :
             exercice20()
-        elif choix == "21":
+        elif choix == "21" :
             exercice21()
-        elif choix== "22":
+        elif choix== "22" :
             exercice22()
-        elif choix=="23":
+        elif choix== "23" :
             exercice23()
-        elif choix=="24":
+        elif choix== "24" :
             exercice24()
-        elif choix=="25":
+        elif choix== "25" :
             exercice25()
-        elif choix=="26":
+        elif choix== "26" :
             exercice26()
-        elif choix=="27":
+        elif choix == "27" :
             exercice27()
-        elif choix=="28":
+        elif choix == "28" :
             exercice28()
+        elif choix == "29" :
+            exercice29()
 
 
         elif choix == "q":
