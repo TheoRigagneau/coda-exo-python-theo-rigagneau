@@ -86,6 +86,13 @@ def exercice23():
         print("Validé")
     else:
         print("Non validé")
+def exercice24():
+    nb1=int(input("Donne un premier nb"))
+    nb2=int(input("Donne un second nb"))
+    if nb1>nb2 :
+        print(nb1,"est plus grand")
+    else:
+        print(nb2,"est plus grand")
 def main():
     while True:
         print("\n=== Menu des exercices ===")
@@ -138,6 +145,8 @@ def main():
             exercice22()
         elif choix=="23":
             exercice23()
+        elif choix=="24":
+            exercice24()
 
 
         elif choix == "q":
