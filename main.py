@@ -173,6 +173,50 @@ def exercice36():
     mot=input("Quel mot voulez vous répeter ?")
     for i in range(nb_de_fois):
         print(mot)
+def exercice37():
+    print("***\n**\n*")
+def exercice38():
+    opérateur=input("quel opérateur voulez vous utiliser(+ - * / )")
+    if opérateur == "+" :
+        exercice5()
+    elif opérateur == "-" :
+        exercice6()
+    elif opérateur == "*" :
+        exercice7()
+    elif opérateur =="/" :
+        exercice8()
+    else:
+        print("tape ce qui est demandé")
+def exercice39():
+    verrif=0
+    nb_secret=int(input("choississez un nb secret"))
+    while verrif ==0:
+        verrif=1
+        réponse=input("pensez vous que le nb est pair ou impair ?")
+        if réponse=="pair":
+            if nb_secret%2==0:
+                print("Gagné !")
+            else:
+                print("Perdu :/")
+        elif réponse=="impair":
+            if nb_secret%2==0:
+                print("Perdu :/")
+            else:
+                print("Gagné !")
+        else:
+            verrif=0
+def exercice40():
+    mdp=input("saissir un mdp")
+    if len(mdp)<5:
+        print("trop court")
+    else :
+        print("validé")
+def exercice41():
+    somme=0
+    for i in range(5):
+        valeur=garde_fou(int(input("Saississez une valeur entre 0 et 20")),0,20)
+        somme+=valeur
+    print('la valeur finale est',somme/5)
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -251,6 +295,17 @@ def main() :
             exercice35()
         elif choix == "36" :
             exercice36()
+        elif choix == "37" :
+            exercice37()
+        elif choix == "38" :
+            exercice38()
+        elif choix == "39" :
+            exercice39()
+        elif choix =="40" :
+            exercice40()
+        elif choix == "41" :
+            exercice41()
+
 
 
         elif choix == "q":
