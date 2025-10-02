@@ -168,6 +168,11 @@ def exercice35() :
     for i in range(numéro):
         if i**2<numéro:
             print(i**2)
+def exercice36():
+    nb_de_fois=int(input("Nombre de fois que vous voulez répeter le mot"))
+    mot=input("Quel mot voulez vous répeter ?")
+    for i in range(nb_de_fois):
+        print(mot)
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -244,6 +249,8 @@ def main() :
             exercice34()
         elif choix == "35" :
             exercice35()
+        elif choix == "36" :
+            exercice36()
 
 
         elif choix == "q":
