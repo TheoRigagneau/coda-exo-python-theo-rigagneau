@@ -74,6 +74,12 @@ def exercice21():
         print("ce nombre est nul")
     else:
         print("ce nombre est négatif")
+def exercice22():
+    age=int(input("Quel est ton age ?"))
+    if age>17:
+        print("Majeur")
+    else:
+        print("Mineur")
 def main():
     while True:
         print("\n=== Menu des exercices ===")
@@ -122,6 +128,8 @@ def main():
             exercice20()
         elif choix == "21":
             exercice21()
+        elif choix== "22":
+            exercice22()
 
 
         elif choix == "q":
