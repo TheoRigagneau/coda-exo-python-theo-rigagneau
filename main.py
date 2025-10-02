@@ -80,6 +80,12 @@ def exercice22():
         print("Majeur")
     else:
         print("Mineur")
+def exercice23():
+    note=int(input("Quelle est ta note ?)"))
+    if note>=10:
+        print("Validé")
+    else:
+        print("Non validé")
 def main():
     while True:
         print("\n=== Menu des exercices ===")
@@ -130,6 +136,8 @@ def main():
             exercice21()
         elif choix== "22":
             exercice22()
+        elif choix=="23":
+            exercice23()
 
 
         elif choix == "q":
