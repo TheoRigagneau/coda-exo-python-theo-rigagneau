@@ -1,7 +1,7 @@
 def garde_fou(a,minimum,maximum):
     while a < minimum  or a > maximum:
         print("Ce nombre n'est pas toléré dans cet exerice")
-        a=int(input("Donnez un second nombre"))
+        a=int(input("Donnez un nombre correspondant aux règles"))
     return a
     
 def exercice1():
@@ -189,7 +189,7 @@ def exercice38():
         print("tape ce qui est demandé")
 def exercice39():
     verrif=0
-    nb_secret=int(input("choississez un nb secret"))
+    nb_secret=randint(0,float("inf"))
     while verrif ==0:
         verrif=1
         réponse=input("pensez vous que le nb est pair ou impair ?")
@@ -217,6 +217,26 @@ def exercice41():
         valeur=garde_fou(int(input("Saississez une valeur entre 0 et 20")),0,20)
         somme+=valeur
     print('la valeur finale est',somme/5)
+def exercice42():
+    nb_mini=float("inf")
+    nb_max=-float("inf")
+    for i in range(5):
+        nombre=int(input("Saississez un nombre"))
+        if nombre <nb_mini:
+            nb_mini=nombre
+        elif nombre > nb_max:
+            nb_max=nombre
+    print("le nombre le plus petit est",nb_mini,"et le nombre le plus grand est",nb_max)
+def exercice43():
+    mot=input("saississez un mot")
+    nb_voyelle=0
+    voyelle="aeiouy"
+    for lettre in mot:
+        if lettre in voyelle:
+            nb_voyelle+=1
+    print("il y a",nb_voyelle)
+            
+    
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -305,6 +325,10 @@ def main() :
             exercice40()
         elif choix == "41" :
             exercice41()
+        elif choix == "42" :
+            exercice42()
+        elif choix == "43" :
+            exercice43()
 
 
 
