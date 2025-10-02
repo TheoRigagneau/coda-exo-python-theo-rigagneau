@@ -134,6 +134,10 @@ def exercice29() :
         print( "Bien" )
     else :
         print ( "Très bien " )
+def exercice30() :
+    fin_compte = int ( input("Quel est la valeur de n" ) )
+    for i in range(0,fin_compte) :
+        print(i+1)
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -198,6 +202,8 @@ def main() :
             exercice28()
         elif choix == "29" :
             exercice29()
+        elif choix == "30" :
+            exercice30()
 
 
         elif choix == "q":
