@@ -156,8 +156,13 @@ def exercice32() : #somme jusqu'a N
     print(somme)
 def exercice33(): #donner la table de multi du numéro
     numéro=int(input("Saississez un numéro"))
-    for i in range(10):
+    for i in range(11):
         print(numéro*i)
+def exercice34():
+    numéro=int(input("Saississez un numéro"))
+    for i in range(numéro):
+        if i%2==0:
+            print(i)
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -230,6 +235,8 @@ def main() :
             exercice32()
         elif choix == "33" :
             exercice33()
+        elif choix == "34" :
+            exercice34()
 
 
         elif choix == "q":
