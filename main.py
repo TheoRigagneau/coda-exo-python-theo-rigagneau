@@ -93,6 +93,13 @@ def exercice24():
         print(nb1,"est plus grand")
     else:
         print(nb2,"est plus grand")
+def exercice25():
+    nb1=int(input("Donne un premier nb"))
+    nb2=int(input("Donne un second nb"))
+    if nb1<nb2:
+        print("Ordre croissant : OUI")
+    else :
+        print("Ordre croissant : NON")
 def main():
     while True:
         print("\n=== Menu des exercices ===")
@@ -147,6 +154,8 @@ def main():
             exercice23()
         elif choix=="24":
             exercice24()
+        elif choix=="25":
+            exercice25()
 
 
         elif choix == "q":
