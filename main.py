@@ -114,6 +114,14 @@ def exercice27():
         print("Adolescent")
     else:
         print("Adulte")
+def exercice28():
+    temp_eau=int(input("Quelle est la température de l'eau ?"))
+    if temp_eau<0 :
+        print("Glace")
+    elif 0<temp_eau<100:
+        print("liquide")
+    else :
+        print("Gazeux")
 def main():
     while True:
         print("\n=== Menu des exercices ===")
@@ -174,6 +182,8 @@ def main():
             exercice26()
         elif choix=="27":
             exercice27()
+        elif choix=="28":
+            exercice28()
 
 
         elif choix == "q":
