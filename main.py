@@ -100,6 +100,12 @@ def exercice25():
         print("Ordre croissant : OUI")
     else :
         print("Ordre croissant : NON")
+def exercice26():
+    nb=int(input("Donne un nb"))
+    if nb%5==0:
+        print("Divisible par 5")
+    else:
+        print("Non divisible par 5")
 def main():
     while True:
         print("\n=== Menu des exercices ===")
@@ -156,6 +162,8 @@ def main():
             exercice24()
         elif choix=="25":
             exercice25()
+        elif choix=="26":
+            exercice26()
 
 
         elif choix == "q":
