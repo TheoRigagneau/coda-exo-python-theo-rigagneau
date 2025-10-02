@@ -136,8 +136,12 @@ def exercice29() :
         print ( "Très bien " )
 def exercice30() :
     fin_compte = int ( input("Quel est la valeur de n" ) )
-    for i in range(0,fin_compte) :
+    for i in range(0 , fin_compte) :
         print(i+1)
+def exercice31() : ##compte a rebourd
+    début_compte = int ( input("Quel est la valeur de n" ) )
+    for i in range(0 , (début_compte+1)) :
+        print(début_compte-i)
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -204,6 +208,8 @@ def main() :
             exercice29()
         elif choix == "30" :
             exercice30()
+        elif choix == "31" :
+            exercice31()
 
 
         elif choix == "q":
