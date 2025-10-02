@@ -2,34 +2,34 @@ def exercice1():
     print("Exercice 1 : Bonjour le monde !")
     print("Hello World !")
 
-def exercice2():
+def exercice2(): 
     nom=input("Quel est votre nom ?")
     print("Bonjour",nom)
 
 def exercice3() :
     print("Première ligne \n Deuxième ligne \n Troisième ligne")
 def exercice4() :
-    année_naissance=int(input("En quelle année est tu né"))
+    année_naissance=int(input("En quelle année est tu né")) ##Donner l'age d'une personne avec son année de naissance
     année_actuelle = 2025
     age=année_actuelle - année_naissance
     print ("tu as",age,"ans")
-def exercice5() :
+def exercice5() : ##somme
     nb1=int(input("Donner un premier nombre"))
     nb2=int(input("Donner un second nombre" ))
     print("la somme des deux nombres est ",nb1+nb2)
-def exercice6() :
+def exercice6() : ##différence
     nb1=int(input("Donner un premier nombre"))
     nb2=int(input("Donner un second nombre" ))
     print("la différence des deux nombres est ",nb1-nb2)
-def exercice7() :
+def exercice7() : ##produit
     nb1=int(input("Donner un premier nombre"))
     nb2=int(input("Donner un second nombre" ))
     print("le produit des deux nombres est ",nb1*nb2)
-def exercice8():
+def exercice8(): ##division
     nb1=int(input("Donner un premier nombre"))
     nb2=int(input("Donner un second nombre" ))
     print("le resultat de la division des deux nombres est ",nb1/nb2)
-def exercice9():
+def exercice9(): 
     nb=int(input("Donner un nombre que vous voulez mettre au carré"))
     print("le nombre au carré est", nb**2)
 def exercice10():
@@ -41,13 +41,13 @@ def exercice11():
 def exercice12():
     for i in range(5):
         print("Ce message doit sortir 5 fois")
-def exercice13():
+def exercice13(): ##compter de 1 à 5
     for i in range(5):
         print(i+1)
-def exercice14():
+def exercice14(): ##table de 2 allant de 2*1 a 2*5
     for i in range(1,6):
         print ("2 *",i,"=",2*i)
-def exercice15():
+def exercice15(): ##
     longueur_coté=int(input("Quel est la tailel de la longueur ?"))
     print("Périmètre = ",longueur_coté*4)
 def exercice16():
@@ -106,6 +106,14 @@ def exercice26():
         print("Divisible par 5")
     else:
         print("Non divisible par 5")
+def exercice27():
+    age=int(input("Donne ton age"))
+    if age<12:
+        print("Enfant")
+    if 12<age<17:
+        print("Adolescent")
+    else:
+        print("Adulte")
 def main():
     while True:
         print("\n=== Menu des exercices ===")
@@ -164,6 +172,8 @@ def main():
             exercice25()
         elif choix=="26":
             exercice26()
+        elif choix=="27":
+            exercice27()
 
 
         elif choix == "q":
