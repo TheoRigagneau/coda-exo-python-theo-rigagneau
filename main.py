@@ -4,21 +4,24 @@ def garde_fou(a, minimum=None, maximum=None):
         minimum = -float("inf")
     if maximum is None:
         maximum = float("inf")
-    vérif=0
-    while vérif==0:
+    verif=0
+    while verif==0:
         try :
             a=float(a)
-            vérif = 1
-            while a < minimum  or a > maximum:
+            if a < minimum  or a > maximum:
                 print("Ce nombre n'est pas toléré dans cet exerice")
                 a=input("Donnez un nombre correspondant aux règles")
+            else:
+                verif=1
         except :
             print("Ce n'est pas un nombre")
             a=input("Donnez un nombre correspondant aux règles")
     return a
+
+
 def garde_fou_carac(a):
-    vérif = 0
-    while vérif== 0 :
+    verif = 0
+    while verif== 0 :
         try :
             float(a)
             print("Ce n'est pas une chaine de caractère")
@@ -28,7 +31,7 @@ def garde_fou_carac(a):
                 print("Il n'y a pas de vrai texte")
                 a=input("Saississez une vraie réponse")
             else:
-                vérif=1
+                verif=1
     return a
                 
 def exercice1():
@@ -266,7 +269,38 @@ def exercice44():
     mot = garde_fou_carac(input("Saisissez un mot à inverser : "))
     mot_inverse = mot[::-1]
     print("Le mot inversé est :", mot_inverse)
-    
+
+def exercice45():
+    valeur=""
+    liste=[]
+    somme=0
+    while valeur !="0":
+        valeur=garde_fou(input("Saississez un nombre ou insérer '0' pour arreter"),0,float("inf"))
+        if valeur == 0:
+            for i in liste:
+                somme+=i
+            print(somme)
+            break
+        else:
+            liste.append(valeur)
+def exercice46():
+    valeur=""
+    liste=[]
+    somme=0
+    while valeur !="0":
+        valeur=garde_fou(input("Saississez un nombre ou insérer '0' pour demander si un nombre est dans la liste"),0,float("inf"))
+        if valeur == 0 :
+            check=garde_fou(input("Choississez un nombre"))
+            for i in liste:
+                if check==i:
+                        print("Oui !")
+                        break
+            if check!=i:
+                print("Non")
+            break
+        else:
+            liste.append(valeur)           
+            
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -361,6 +395,10 @@ def main() :
             exercice43()
         elif choix == "44" :
             exercice44()
+        elif choix == "45" :
+            exercice45()
+        elif choix == "46" :
+            exercice46()
 
 
 
