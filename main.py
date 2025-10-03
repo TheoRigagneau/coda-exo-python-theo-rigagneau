@@ -317,7 +317,7 @@ def exercice49():
     nb=int(garde_fou(input("Donnez un nombre dont vous voulez savoir s'il est premier"),0,100000))
     for i in range(1,nb+1):
         if nb%i==0:
-            verif+=1
+            verif+=1 
     if verif==2:
         print(nb,"est premier")
     else:
@@ -403,7 +403,25 @@ def exercice53():
             val_finale = "0"
                 
     print(val_finale)
-                        
+def exercice54():
+    de1=randint(1,6)
+    de2=randint(1,6)
+    print("Dé 1 =",de1,"Dé 2 =",de2,"Somme =",de1+de2)
+def exercice55():
+    facto=int(garde_fou(input("Saissir une valeur dont vous voulez connaitre son factorielle"),0,30))
+    somme=1
+    for i in range(facto):
+        somme*=(i+1)
+    print(somme)
+def exercice56():
+    val_premiere=garde_fou(input("Saississez une valeur première",))
+    raison=garde_fou(input("Saississez une raison"))
+    val=val_premiere
+    print(val)
+    while val<500:
+        val+=raison
+        print(val)
+        
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -516,6 +534,12 @@ def main() :
             exercice52()
         elif choix== "53" :
             exercice53()
+        elif choix == "54" :
+            exercice54()
+        elif choix == "55" :
+            exercice55()
+        elif choix == "56" :
+            exercice56()
 
 
         elif choix == "q":
