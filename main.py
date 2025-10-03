@@ -47,8 +47,6 @@ def liste():
         else:
             break
     return liste
-
-
 def exercice1():
     print("Exercice 1 : Bonjour le monde !")
     print("Hello World !")
@@ -369,8 +367,43 @@ def exercice52():
             print("Ce n'est pas un carré magique")
     else:
         print("Ce n'est pas un carré magique")
-    
-        
+
+def exercice53():
+    choix=garde_fou(input("Bin -> Décimal : 1 Décimal -> Bin : 2"),1,2)
+    if choix == 1:
+        ok=1
+        while ok==1:
+            ok=0
+            nb=str(input("Saisir une valeur binaire"))
+            for i in range (len(str(nb))):
+                if nb[i] !="1" and nb[i] !="0" :
+                    print(nb[i])
+                    ok=1
+                    break
+        val_dec=0
+        nb_inverse=nb[::-1]
+        for i in range(len(str(nb_inverse))):
+            val_dec+=int(nb_inverse[i])*(2**(i))
+            print(nb[i],i,val_dec)
+        print(val_dec)
+    if choix == 2 :
+        val=""
+        nb_init=int(garde_fou(input("Saisir une valeur décimale"),0,float("inf")))
+        nb=nb_init
+        while nb!=0:
+            for i in range(30):
+                if nb >= 2**(29-i):
+                    val+="1"
+                    nb-=2**(29-i)
+                else:
+                    val+="0"
+        val_finale=""
+        val_finale = val.lstrip('0')  
+        if val_finale == "":
+            val_finale = "0"
+                
+    print(val_finale)
+                        
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -481,6 +514,8 @@ def main() :
             exercice51()
         elif choix=="52" :
             exercice52()
+        elif choix== "53" :
+            exercice53()
 
 
         elif choix == "q":
