@@ -324,7 +324,53 @@ def exercice49():
         print(nb,"est premier")
     else:
         print(nb,"n'est pas premier")
-
+def exercice50():
+    nb=int(garde_fou(input("Donner un nombre pour savoir la suite de Fibonacci jusqu'a ce nombre"),0,100))
+    l=[0]
+    for i in range(nb):
+        if l==[0]:
+            l.append(1)
+        else:
+            print(l,i)
+            l.append((l[i]+l[i-1]))
+    print(l)
+def exercice51(): #pascal
+    triangle=[]
+    for i in range(5):
+        if i==0:
+            ligne=[1]
+        else:
+            ligne_precedante=triangle[-1]
+            ligne=[1]
+            for j in range (len(ligne_precedante)-1):
+                somme = ligne_precedante[j]+ligne_precedante[j+1]
+                ligne.append(somme)
+            ligne.append(1)
+        triangle.append(ligne)
+    for rangee in triangle:
+        print(rangee)
+def exercice52():
+    l1,l2,l3=[],[],[]
+    for i in range(9):
+        nb=garde_fou(input("Saississez un nombre"))
+        if 0<=len(l1)<3:
+            l1.append(nb)
+        elif 0<=len(l2)<3:
+            l2.append(nb)            
+        else:
+            l3.append(nb)
+    if sum(l1) == sum(l2) and sum(l3) == sum(l2) :
+        if l1[0]+l2[0]+l3[0]== sum(l1) and l1[1]+l2[1]+l3[1] == sum(l1) and l1[2]+l2[2]+l3[2] == sum(l1):
+            if l1[0]+l2[1]+l3[2] == sum(l1) and l1[2]+l2[1]+l1[0]:
+                print ('Carré magique')
+            else :
+                print("Ce n'est pas un carré magique")
+        else:
+            print("Ce n'est pas un carré magique")
+    else:
+        print("Ce n'est pas un carré magique")
+    
+        
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -429,6 +475,12 @@ def main() :
             exercice48()
         elif choix == "49" :
             exercice49()
+        elif choix == "50" :
+            exercice50()
+        elif choix== "51" :
+            exercice51()
+        elif choix=="52" :
+            exercice52()
 
 
         elif choix == "q":
