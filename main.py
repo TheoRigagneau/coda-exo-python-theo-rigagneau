@@ -33,6 +33,7 @@ def garde_fou_carac(a):
             else:
                 verif=1
     return a
+
 def liste():
     valeur=""
     liste=[]
@@ -46,6 +47,8 @@ def liste():
         else:
             break
     return liste
+
+
 def exercice1():
     print("Exercice 1 : Bonjour le monde !")
     print("Hello World !")
@@ -306,6 +309,21 @@ def exercice47():
         if check==i:
             nb_valeur+=1
     print(nb_valeur,"fois !")
+def exercice48():
+    nb=int(garde_fou(input("Donnez un nombre dont vous voulez les diviseurs entre 0 et 100000"),0,100000))
+    for i in range (1,(nb+1)):
+        if nb%i==0:
+                 print(i)
+def exercice49():
+    verif=0
+    nb=int(garde_fou(input("Donnez un nombre dont vous voulez savoir s'il est premier"),0,100000))
+    for i in range(1,nb+1):
+        if nb%i==0:
+            verif+=1
+    if verif==2:
+        print(nb,"est premier")
+    else:
+        print(nb,"n'est pas premier")
 
 def main() :
     while True:
@@ -407,7 +425,10 @@ def main() :
             exercice46()
         elif choix == "47" :
             exercice47()
-
+        elif choix =="48" :
+            exercice48()
+        elif choix == "49" :
+            exercice49()
 
 
         elif choix == "q":
