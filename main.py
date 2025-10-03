@@ -33,7 +33,19 @@ def garde_fou_carac(a):
             else:
                 verif=1
     return a
-                
+def liste():
+    valeur=""
+    liste=[]
+    somme=0
+    while valeur !="0":
+        valeur=garde_fou(input("Saississez un nombre ou insérer '0' pour demander si un nombre est dans la liste"),0,float("inf"))
+        if valeur != 0 :
+            liste.append(valeur)
+        elif liste==[] and valeur==0 :
+            valeur=1
+        else:
+            break
+    return liste
 def exercice1():
     print("Exercice 1 : Bonjour le monde !")
     print("Hello World !")
@@ -271,36 +283,30 @@ def exercice44():
     print("Le mot inversé est :", mot_inverse)
 
 def exercice45():
-    valeur=""
-    liste=[]
     somme=0
-    while valeur !="0":
-        valeur=garde_fou(input("Saississez un nombre ou insérer '0' pour arreter"),0,float("inf"))
-        if valeur == 0:
-            for i in liste:
-                somme+=i
-            print(somme)
-            break
-        else:
-            liste.append(valeur)
+    liste_nb=liste()
+    for i in liste_nb:
+        somme+=i
+    print(somme)
+
 def exercice46():
-    valeur=""
-    liste=[]
-    somme=0
-    while valeur !="0":
-        valeur=garde_fou(input("Saississez un nombre ou insérer '0' pour demander si un nombre est dans la liste"),0,float("inf"))
-        if valeur == 0 :
-            check=garde_fou(input("Choississez un nombre"))
-            for i in liste:
-                if check==i:
-                        print("Oui !")
-                        break
-            if check!=i:
-                print("Non")
+    liste_nb=liste()
+    check=garde_fou(input("Choississez un nombre"))
+    for i in liste_nb:
+        if check==i:
+            print("Oui !")
             break
-        else:
-            liste.append(valeur)           
-            
+    if check!=i:
+        print("Non")
+def exercice47():
+    liste_nb=liste()
+    check=garde_fou(input("Choississe un nombre"))
+    nb_valeur=0
+    for i in liste_nb:
+        if check==i:
+            nb_valeur+=1
+    print(nb_valeur,"fois !")
+
 def main() :
     while True:
         print("\n=== Menu des exercices ===")
@@ -399,6 +405,8 @@ def main() :
             exercice45()
         elif choix == "46" :
             exercice46()
+        elif choix == "47" :
+            exercice47()
 
 
 
